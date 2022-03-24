@@ -1,0 +1,480 @@
+<!--
+** This program is free software: you can redistribute it and/or modify
+** it under the terms of the GNU General Public License as published by
+** the Free Software Foundation, either version 3 of the License, or
+** (at your option) any later version.
+**
+** This program is distributed in the hope that it will be useful,
+** but WITHOUT ANY WARRANTY; without even the implied warranty of
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+** GNU General Public License for more details.
+**
+** You should have received a copy of the GNU General Public License
+** along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<project default="all">
+	<taskdef resource="bb-ant-defs.xml" />
+
+	<property name="jde42.home" location="/opt/RIM/JDE4.2.1" />
+	<property name="jde43.home" location="/opt/RIM/JDE4.3.0" />
+	<property name="jde45.home" location="/opt/RIM/JDE4.5.0" />
+	<property name="jde46.home" location="/opt/RIM/JDE4.6.0" />
+	<property name="jde47.home" location="/opt/RIM/JDE4.7.0" />
+	<property name="jde50.home" location="/opt/RIM/JDE5.0.0" />
+	<property name="jde60.home" location="/opt/RIM/JDE6.0.0" />
+	<property name="jde70.home" location="/opt/RIM/JDE7.0.0" />
+
+	<target name="all" depends="money,keygen" />
+
+	<target name="clean">
+		<delete dir="releases" />
+	</target>
+
+	<!--#####################################################################################################################-->
+	<!--Money                                                                                                                -->
+	<!--#####################################################################################################################-->
+	<target name="money" depends="cleanmoney,compilemoney,signmoney,releasemoney" />
+
+	<target name="cleanmoney">
+		<delete dir="releases/Money" />
+	</target>
+
+	<target name="compilemoney" depends="money42,money43,money45,money46,money47,money50,money60,money70" />
+
+	<target name="money42">
+		<mkdir dir="releases/Money/build42" />
+		<rapc output="Money" destdir="releases/Money/build42" jdehome="${jde42.home}" nowarn="true" nodebug="true" encoding="ISO-8859-1">
+			<define tag="allcodegroups" />
+			<jdp file="Money.properties">
+				<entry file="MoneyStartup.properties" />
+				<entry file="MoneyShortcuts.properties" />
+			</jdp>
+			<src>
+				<fileset dir="Money/src">
+					<include name="**/*.java" />
+				</fileset>
+				<fileset dir="Money/res">
+					<include name="**/*.rrc" />
+					<include name="**/*.rrh" />
+				</fileset>
+				<fileset dir="Money/res/com/beigebinder/img42">
+					<include name="BeigeBinder.png" />
+					<include name="Folder.png" />
+					<include name="Money.png" />
+					<include name="MoneyPay.png" />
+					<include name="MoneyRollover.png" />
+					<include name="MoneyRolloverPay.png" />
+					<include name="MoneyRolloverT.png" />
+					<include name="MoneyT.png" />
+				</fileset>
+			</src>
+		</rapc>
+	</target>
+
+
+	<target name="money43">
+		<mkdir dir="releases/Money/build43" />
+		<rapc output="Money" destdir="releases/Money/build43" jdehome="${jde43.home}" nowarn="true" nodebug="true" encoding="ISO-8859-1">
+			<define tag="nopreprocess" />
+			<jdp file="Money.properties">
+				<entry file="MoneyStartup.properties" />
+				<entry file="MoneyShortcuts.properties" />
+			</jdp>
+			<src>
+				<fileset dir="Money/src">
+					<include name="**/*.java" />
+				</fileset>
+				<fileset dir="Money/res">
+					<include name="**/*.rrc" />
+					<include name="**/*.rrh" />
+				</fileset>
+				<fileset dir="Money/res/com/beigebinder/img43">
+					<include name="BeigeBinder.png" />
+					<include name="Folder.png" />
+					<include name="Money.png" />
+					<include name="MoneyPay.png" />
+					<include name="MoneyRollover.png" />
+					<include name="MoneyRolloverPay.png" />
+					<include name="MoneyRolloverT.png" />
+					<include name="MoneyT.png" />
+				</fileset>
+			</src>
+		</rapc>
+	</target>
+
+	<target name="money45">
+		<mkdir dir="releases/Money/build45" />
+		<rapc output="Money" destdir="releases/Money/build45" jdehome="${jde45.home}" nowarn="true" nodebug="true" encoding="ISO-8859-1">
+			<define tag="nopreprocess" />
+			<jdp file="Money.properties">
+				<entry file="MoneyStartup.properties" />
+				<entry file="MoneyShortcuts.properties" />
+			</jdp>
+			<src>
+				<fileset dir="Money/src">
+					<include name="**/*.java" />
+				</fileset>
+				<fileset dir="Money/res">
+					<include name="**/*.rrc" />
+					<include name="**/*.rrh" />
+				</fileset>
+				<fileset dir="Money/res/com/beigebinder/img45">
+					<include name="BeigeBinder.png" />
+					<include name="Folder.png" />
+					<include name="Money.png" />
+					<include name="MoneyPay.png" />
+					<include name="MoneyRollover.png" />
+					<include name="MoneyRolloverPay.png" />
+					<include name="MoneyRolloverT.png" />
+					<include name="MoneyT.png" />
+				</fileset>
+			</src>
+		</rapc>
+	</target>
+
+	<target name="money46">
+		<mkdir dir="releases/Money/build46" />
+		<rapc output="Money" destdir="releases/Money/build46" jdehome="${jde46.home}" nowarn="true" nodebug="true" encoding="ISO-8859-1">
+			<define tag="Indicators" />
+			<jdp file="Money.properties">
+				<entry file="MoneyStartup.properties" />
+				<entry file="MoneyShortcuts.properties" />
+			</jdp>
+			<src>
+				<fileset dir="Money/src">
+					<include name="**/*.java" />
+				</fileset>
+				<fileset dir="Money/res">
+					<include name="**/*.rrc" />
+					<include name="**/*.rrh" />
+				</fileset>
+				<fileset dir="Money/res/com/beigebinder/img46">
+					<include name="BeigeBinder.png" />
+					<include name="Folder.png" />
+					<include name="Money.png" />
+					<include name="MoneyIndicator.png" />
+					<include name="MoneyPay.png" />
+					<include name="MoneyRollover.png" />
+					<include name="MoneyRolloverPay.png" />
+					<include name="MoneyRolloverT.png" />
+					<include name="MoneyT.png" />
+				</fileset>
+			</src>
+		</rapc>
+	</target>
+
+
+	<target name="money47">
+		<mkdir dir="releases/Money/build47" />
+		<rapc output="Money" destdir="releases/Money/build47" jdehome="${jde47.home}" nowarn="true" nodebug="true" encoding="ISO-8859-1">
+			<define tag="Indicators" />
+			<jdp file="Money.properties">
+				<entry file="MoneyStartup.properties" />
+				<entry file="MoneyShortcuts.properties" />
+			</jdp>
+			<src>
+				<fileset dir="Money/src">
+					<include name="**/*.java" />
+				</fileset>
+				<fileset dir="Money/res">
+					<include name="**/*.rrc" />
+					<include name="**/*.rrh" />
+				</fileset>
+				<fileset dir="Money/res/com/beigebinder/img47">
+					<include name="BeigeBinder.png" />
+					<include name="Folder.png" />
+					<include name="Money.png" />
+					<include name="MoneyIndicator.png" />
+					<include name="MoneyPay.png" />
+					<include name="MoneyRollover.png" />
+					<include name="MoneyRolloverPay.png" />
+					<include name="MoneyRolloverT.png" />
+					<include name="MoneyT.png" />
+				</fileset>
+			</src>
+		</rapc>
+	</target>
+
+	<target name="money50">
+		<mkdir dir="releases/Money/build50" />
+		<rapc output="Money" destdir="releases/Money/build50" jdehome="${jde50.home}" nowarn="true" nodebug="true" encoding="ISO-8859-1">
+			<define tag="Indicators" />
+			<jdp file="Money.properties">
+				<entry file="MoneyStartup.properties" />
+				<entry file="MoneyShortcuts.properties" />
+			</jdp>
+			<src>
+				<fileset dir="Money/src">
+					<include name="**/*.java" />
+				</fileset>
+				<fileset dir="Money/res">
+					<include name="**/*.rrc" />
+					<include name="**/*.rrh" />
+				</fileset>
+				<fileset dir="Money/res/com/beigebinder/img50">
+					<include name="BeigeBinder.png" />
+					<include name="Folder.png" />
+					<include name="Money.png" />
+					<include name="MoneyIndicator.png" />
+					<include name="MoneyPay.png" />
+					<include name="MoneyRollover.png" />
+					<include name="MoneyRolloverPay.png" />
+					<include name="MoneyRolloverT.png" />
+					<include name="MoneyT.png" />
+				</fileset>
+			</src>
+		</rapc>
+	</target>
+
+	<target name="money60">
+		<mkdir dir="releases/Money/build60" />
+		<rapc output="Money" destdir="releases/Money/build60" jdehome="${jde60.home}" nowarn="true" nodebug="true" encoding="ISO-8859-1">
+			<define tag="Indicators" />
+			<define tag="stringprovider" />
+			<jdp file="Money.properties">
+				<entry file="MoneyStartup.properties" />
+				<entry file="MoneyShortcuts.properties" />
+			</jdp>
+			<src>
+				<fileset dir="Money/src">
+					<include name="**/*.java" />
+				</fileset>
+				<fileset dir="Money/res">
+					<include name="**/*.rrc" />
+					<include name="**/*.rrh" />
+				</fileset>
+				<fileset dir="Money/res/com/beigebinder/img60">
+					<include name="BeigeBinder.png" />
+					<include name="Folder.png" />
+					<include name="Money.png" />
+					<include name="MoneyIndicator.png" />
+					<include name="MoneyPay.png" />
+					<include name="MoneyRollover.png" />
+					<include name="MoneyRolloverPay.png" />
+					<include name="MoneyRolloverT.png" />
+					<include name="MoneyT.png" />
+				</fileset>
+			</src>
+		</rapc>
+	</target>
+
+	<target name="money70">
+		<mkdir dir="releases/Money/build70" />
+		<rapc output="Money" destdir="releases/Money/build70" jdehome="${jde70.home}" nowarn="true" nodebug="true" encoding="ISO-8859-1">
+			<define tag="Indicators" />
+			<define tag="stringprovider" />
+			<jdp file="Money.properties">
+				<entry file="MoneyStartup.properties" />
+				<entry file="MoneyShortcuts.properties" />
+			</jdp>
+			<src>
+				<fileset dir="Money/src">
+					<include name="**/*.java" />
+				</fileset>
+				<fileset dir="Money/res">
+					<include name="**/*.rrc" />
+					<include name="**/*.rrh" />
+				</fileset>
+				<fileset dir="Money/res/com/beigebinder/img70">
+					<include name="BeigeBinder.png" />
+					<include name="Folder.png" />
+					<include name="Money.png" />
+					<include name="MoneyIndicator.png" />
+					<include name="MoneyPay.png" />
+					<include name="MoneyRollover.png" />
+					<include name="MoneyRolloverPay.png" />
+					<include name="MoneyRolloverT.png" />
+					<include name="MoneyT.png" />
+				</fileset>
+			</src>
+		</rapc>
+	</target>
+
+	<target name="signmoney">
+		<sigtool codfile="releases/Money/build42/Money.cod" jdehome="${jde70.home}" password="1029384756" />
+		<sigtool codfile="releases/Money/build43/Money.cod" jdehome="${jde70.home}" password="1029384756" />
+		<sigtool codfile="releases/Money/build45/Money.cod" jdehome="${jde70.home}" password="1029384756" />
+		<sigtool codfile="releases/Money/build46/Money.cod" jdehome="${jde70.home}" password="1029384756" />
+		<sigtool codfile="releases/Money/build47/Money.cod" jdehome="${jde70.home}" password="1029384756" />
+		<sigtool codfile="releases/Money/build50/Money.cod" jdehome="${jde70.home}" password="1029384756" />
+		<sigtool codfile="releases/Money/build60/Money.cod" jdehome="${jde70.home}" password="1029384756" />
+		<sigtool codfile="releases/Money/build70/Money.cod" jdehome="${jde70.home}" password="1029384756" />
+	</target>
+
+	<target name="releasemoney">
+		<delete dir="releases/Money/Money" />
+		<alx destdir="releases/Money/Money" filename="Money.alx">
+			<application file="Money.properties" id="com.beigebinder.money">
+				<codset dir="42" greaterthanequal="4.2" lessthan="4.3">
+					<fileset dir="releases/Money/build42" includes="*.cod" />
+				</codset>
+				<codset dir="43" greaterthanequal="4.3" lessthan="4.5">
+					<fileset dir="releases/Money/build43" includes="*.cod" />
+				</codset>
+				<codset dir="45" greaterthanequal="4.5" lessthan="4.6">
+					<fileset dir="releases/Money/build43" includes="*.cod" />
+				</codset>
+				<codset dir="46" greaterthanequal="4.6" lessthan="4.7">
+					<fileset dir="releases/Money/build46" includes="*.cod" />
+				</codset>
+				<codset dir="47" greaterthanequal="4.7" lessthan="5.0">
+					<fileset dir="releases/Money/build47" includes="*.cod" />
+				</codset>
+				<codset dir="50" greaterthanequal="5.0" lessthan="6.0">
+					<fileset dir="releases/Money/build50" includes="*.cod" />
+				</codset>
+				<codset dir="60" greaterthanequal="6.0" lessthan="7.0">
+					<fileset dir="releases/Money/build60" includes="*.cod" />
+				</codset>
+				<codset dir="70" greaterthanequal="7.0">
+					<fileset dir="releases/Money/build70" includes="*.cod" />
+				</codset>
+			</application>
+		</alx>
+		<zip destfile="releases/Money/Money.zip" basedir="releases/Money/Money" />
+		<delete dir="releases/Money/ota" />
+		<jadtool input="releases/Money/build42/Money.jad" destdir="releases/Money/ota/4.2">
+			<fileset dir="releases/Money/build42" includes="*.cod" />
+		</jadtool>
+		<jadtool input="releases/Money/build43/Money.jad" destdir="releases/Money/ota/4.3">
+			<fileset dir="releases/Money/build43" includes="*.cod" />
+		</jadtool>
+		<jadtool input="releases/Money/build45/Money.jad" destdir="releases/Money/ota/4.5">
+			<fileset dir="releases/Money/build45" includes="*.cod" />
+		</jadtool>
+		<jadtool input="releases/Money/build46/Money.jad" destdir="releases/Money/ota/4.6">
+			<fileset dir="releases/Money/build46" includes="*.cod" />
+		</jadtool>
+		<jadtool input="releases/Money/build47/Money.jad" destdir="releases/Money/ota/4.7">
+			<fileset dir="releases/Money/build47" includes="*.cod" />
+		</jadtool>
+		<jadtool input="releases/Money/build50/Money.jad" destdir="releases/Money/ota/5.0">
+			<fileset dir="releases/Money/build50" includes="*.cod" />
+		</jadtool>
+		<jadtool input="releases/Money/build60/Money.jad" destdir="releases/Money/ota/6.0">
+			<fileset dir="releases/Money/build60" includes="*.cod" />
+		</jadtool>
+		<jadtool input="releases/Money/build70/Money.jad" destdir="releases/Money/ota/7.0">
+			<fileset dir="releases/Money/build70" includes="*.cod" />
+		</jadtool>
+		<delete dir="releases/Money/build42" />
+		<delete dir="releases/Money/build43" />
+		<delete dir="releases/Money/build45" />
+		<delete dir="releases/Money/build46" />
+		<delete dir="releases/Money/build47" />
+		<delete dir="releases/Money/build50" />
+		<delete dir="releases/Money/build60" />
+		<delete dir="releases/Money/build70" />
+		<delete dir="releases/Money/Money" />
+	</target>
+
+	<!--#####################################################################################################################-->
+	<!--Keygen                                                                                                               -->
+	<!--#####################################################################################################################-->
+
+	<target name="keygen" depends="cleankeygen,compilekeygen,signkeygen,releasekeygen" />
+
+	<target name="cleankeygen">
+		<delete dir="releases/KeyGen" />
+	</target>
+
+	<target name="compilekeygen" depends="keygen47,keygen50,keygen60,keygen70" />
+
+	<target name="keygen47">
+		<mkdir dir="releases/KeyGen/build47" />
+		<rapc output="KeyGen" destdir="releases/KeyGen/build47" jdehome="${jde47.home}" nowarn="true" nodebug="true" encoding="ISO-8859-1">
+			<jdp file="Keygen.properties">
+			</jdp>
+			<src>
+				<fileset dir="KeyGen/src">
+					<include name="**/*.*" />
+				</fileset>
+			</src>
+		</rapc>
+	</target>
+
+	<target name="keygen50">
+		<mkdir dir="releases/KeyGen/build50" />
+		<rapc output="KeyGen" destdir="releases/KeyGen/build50" jdehome="${jde50.home}" nowarn="true" nodebug="true" encoding="ISO-8859-1">
+			<jdp file="Keygen.properties">
+			</jdp>
+			<src>
+				<fileset dir="KeyGen/src">
+					<include name="**/*.*" />
+				</fileset>
+			</src>
+		</rapc>
+	</target>
+
+	<target name="keygen60">
+		<mkdir dir="releases/KeyGen/build60" />
+		<rapc output="KeyGen" destdir="releases/KeyGen/build60" jdehome="${jde60.home}" nowarn="true" nodebug="true" encoding="ISO-8859-1">
+			<jdp file="Keygen.properties">
+			</jdp>
+			<src>
+				<fileset dir="KeyGen/src">
+					<include name="**/*.*" />
+				</fileset>
+			</src>
+		</rapc>
+	</target>
+
+	<target name="keygen70">
+		<mkdir dir="releases/KeyGen/build70" />
+		<rapc output="KeyGen" destdir="releases/KeyGen/build70" jdehome="${jde70.home}" nowarn="true" nodebug="true" encoding="ISO-8859-1">
+			<jdp file="Keygen.properties">
+			</jdp>
+			<src>
+				<fileset dir="KeyGen/src">
+					<include name="**/*.*" />
+				</fileset>
+			</src>
+		</rapc>
+	</target>
+
+	<target name="signkeygen">
+		<sigtool codfile="releases/KeyGen/build47/KeyGen.cod" jdehome="${jde70.home}" password="1029384756" />
+		<sigtool codfile="releases/KeyGen/build50/KeyGen.cod" jdehome="${jde70.home}" password="1029384756" />
+		<sigtool codfile="releases/KeyGen/build60/KeyGen.cod" jdehome="${jde70.home}" password="1029384756" />
+		<sigtool codfile="releases/KeyGen/build70/KeyGen.cod" jdehome="${jde70.home}" password="1029384756" />
+	</target>
+
+	<target name="releasekeygen">
+		<delete dir="releases/KeyGen/KeyGen" />
+		<alx destdir="releases/KeyGen/KeyGen" filename="KeyGen.alx">
+			<application file="Keygen.properties" id="com.beigebinder.keygen">
+				<codset dir="47" greaterthanequal="4.7" lessthan="5.0">
+					<fileset dir="releases/KeyGen/build47" includes="*.cod" />
+				</codset>
+				<codset dir="50" greaterthanequal="5.0" lessthan="6.0">
+					<fileset dir="releases/KeyGen/build50" includes="*.cod" />
+				</codset>
+				<codset dir="60" greaterthanequal="6.0" lessthan="7.0">
+					<fileset dir="releases/KeyGen/build60" includes="*.cod" />
+				</codset>
+				<codset dir="70" greaterthanequal="7.0">
+					<fileset dir="releases/KeyGen/build70" includes="*.cod" />
+				</codset>
+			</application>
+		</alx>
+		<zip destfile="releases/KeyGen/KeyGen.zip" basedir="releases/KeyGen/KeyGen" />
+		<delete dir="releases/KeyGen/ota" />
+		<jadtool input="releases/KeyGen/build47/KeyGen.jad" destdir="releases/KeyGen/ota/4.7">
+			<fileset dir="releases/KeyGen/build47" includes="*.cod" />
+		</jadtool>
+		<jadtool input="releases/KeyGen/build50/KeyGen.jad" destdir="releases/KeyGen/ota/5.0">
+			<fileset dir="releases/KeyGen/build50" includes="*.cod" />
+		</jadtool>
+		<jadtool input="releases/KeyGen/build60/KeyGen.jad" destdir="releases/KeyGen/ota/6.0">
+			<fileset dir="releases/KeyGen/build60" includes="*.cod" />
+		</jadtool>
+		<jadtool input="releases/KeyGen/build70/KeyGen.jad" destdir="releases/KeyGen/ota/7.0">
+			<fileset dir="releases/KeyGen/build70" includes="*.cod" />
+		</jadtool>
+		<delete dir="releases/KeyGen/build47" />
+		<delete dir="releases/KeyGen/build50" />
+		<delete dir="releases/KeyGen/build60" />
+		<delete dir="releases/KeyGen/build70" />
+		<delete dir="releases/KeyGen/KeyGen" />
+	</target>
+</project>

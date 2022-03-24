@@ -1,0 +1,264 @@
+ABOUT#0="About...";
+ABOUTMESSAGE#0="Money for BlackBerry";
+ABOUTMESSAGE2#0="by BeigeBinder";
+ACCOUNT#0="Account: ";
+ACCOUNTEXISTS#0="An Account with same name and type already exists.";
+ACCOUNTS#0="Accounts: ";
+ACCOUNTSTITLE#0="Accounts";
+ACCOUNTTYPES#0={
+    "Asset",
+    "Cash",
+    "Check",
+    "Bank",
+    "Savings",
+    "Investment",
+    "Liability",
+    "Credit Line",
+    "Credit Card",
+    "Loan",
+};
+ADDACOUNT#0="Add a new Account and select it.";
+ADDCATEGORY#0="Add a new Category and select it.";
+ADDMEMO#0="Add Memo";
+ADDSPLIT#0="Add Split";
+ADDTAX#0="Tax Rate";
+ALERTOPTIONTITLE#0="Show Alert: ";
+AMMOUNTINVALID#0="Enter a valid number.";
+AMOUNT#0="Amount: ";
+APLICATIONDESCRIPTION#0="Money";
+APLICATIONDESCRIPTION1#0="Shortcuts";
+APLICATIONTITLE#0="Money";
+APLICATIONTITLE1#0="Shortcuts";
+APPLY#0="Apply";
+APPLYALL#0="Apply All";
+ASKFORAPPLY#0="Move transaction to accounts?";
+ASKFORAPPLYALL#0="Move all transactions to accounts?";
+ASKFORCANCEL#0="Cancel transaction?";
+ASKFORCLEAN#0="Delete paid flag and check flag for all items?";
+ASKFORCLOSEACCOUNT#0="Mark Account as closed?";
+ASKFORCREATEEXPENSE#0="Create expense using checked items?";
+ASKFORDELETEACCOUNT#0="Delete Account?";
+ASKFORDELETECATEGORY#0="Delete Category?";
+ASKFORDELETEITEM#0="Delete Item?";
+ASKFORDELETEMEMO#0="Delete Memo?";
+ASKFORDELETENOTIFICATION#0="Delete Scheduled?";
+ASKFORDELETESHOPINGLIST#0="Delete Shopping list?";
+ASKFORDELETETRANSACTION#0="Delete Transaction?";
+ASKFOROPENACCOUNT#0="Mark Account as open?";
+ASKFORPAY#0="Mark checked items as paid?";
+ASKFORPOSPONER#0="Postpone?";
+ASKFORPURGUE#0="Purge all transactions prior to date?";
+ASKFORRECONCILIE#0="Reconcile Account?";
+ASKFORZEROBALANCES#0="Reset opening balances?";
+BACKFOLDER#0="Back";
+BALANCE#0="Balance: ";
+BALANCECLEARED#0="Cleared: ";
+BALANCEDIFFERENCE#0="Difference: ";
+BALANCEENDING#0="Ending Balance: ";
+BALANCEINITIAL#0="Opening Balance: ";
+BALANCERECONCILED#0="Reconciled: ";
+BETTERVERSION#0="There is a better version for your device. Do you want to download it now?";
+CALCULATE#0="Calculate";
+CANCEL#0="Cancel";
+CATEGORIESTITLE#0="Categories";
+CATEGORY#0="Category";
+CATEGORYEXISTS#0="A Category with same name and type already exists.";
+CATEGORYUNDEFINED#0="<Without Category>";
+CHANGECURRENCY#0="Change currency";
+CHECK#0="Check";
+CHECKLIST#0="Checklist";
+CLEAN#0="Clean";
+CLOSE#0="Close";
+CLOSED#0="Closed";
+CLOSEDACCOUNTALERT#0="Closed account.";
+CONFIRMAMOUNT#0="Confirm amount and quantity";
+CONTACT#0="For support send an email to support@beigebinder.com, please include your Order Number and your BlackBerry PIN.";
+CONTENTTYPEQIF#0="text/qif";
+CONTENTTYPEXLS#0="text/txt";
+CURRENCY#0="Currency: ";
+CURRENTBALANCE#0="Current:";
+DATAEMPTY#0="Description is empty, continue?";
+DATAPAYEEEMPTY#0="Payee is empty, continue?";
+DATE#0="Date: ";
+DATES#0="Dates: ";
+DAYSFORALERT#0="Days prior to notify: ";
+DEFAULTCURRENCY#0="Default currency";
+DELETE#0="Delete";
+DELETEACCOUNT#0="Delete";
+DELETEITEM#0="Delete Item";
+DELETESHOPINGLIST#0="Delete Shopping list";
+DELETESPLIT#0="Delete Split";
+DELETETRANSACTION#0="Delete Transaction";
+DESCRIPTION#0="Description: ";
+DESCRIPTIONINVALID#0="Enter a valid description.";
+EDIT#0="Edit";
+EDITACCOUNT#0="Edit Account";
+EDITITEM#0="Edit Item";
+EDITMEMO#0="Edit Memo";
+EDITSCHEDULE#0="Edit Scheduled";
+EDITSHOPINGLIST#0="Open Shopping list";
+EDITSPLIT#0="Edit Split";
+EDITTEMPLATE#0="Edit Template";
+EDITTRANSACTION#0="Edit Transaction";
+ENDDATE#0="End Date: ";
+ENDTRIAL#0="The trial period has expired. Please enter registration key: ";
+ENDTRIAL2#0="Please enter registration key: ";
+ENDTRIALERR#0="Incorrect registration key.";
+EXCHANGEFACTOR#0="Exchange Rate: ";
+EXECUTEDTITLE#0="Upcoming";
+EXPENSES#0={
+    "Bill Cable",
+    "Bill Electricity",
+    "Bill Gas",
+    "Bill Rent",
+    "Bill Telephone",
+    "Car Maintenance",
+    "Car Petrol",
+    "Clothing",
+    "Dental",
+    "Dining Out",
+    "Doctor",
+    "Gifts",
+    "Groceries",
+    "Taxes",
+};
+EXPORTACCOUNT#0={
+    "All Accounts",
+    "Selected Accounts",
+};
+EXPORTANDAEMAIL#0="Send by email.";
+EXPORTANDSAVE#0="Save to card.";
+EXPORTDATES#0={
+    "All Dates",
+    "Selected Dates",
+};
+EXPORTMESSAGE#0="Report has been generated.";
+EXPORTTITLE#0="Export";
+EXPORTTYPES#0={
+    "Text",
+    "QIF Format 1",
+    "QIF Format 2",
+};
+FORMAT#0="Format: ";
+FROM#0="From: ";
+GOTODATE#0="Go to date";
+HELP#0="Help";
+HIDECHEQUED#0="Hide checked";
+HIDENOHIPRIORITY#0="Only high priority";
+HIDEPAID#0="Hide paid";
+INCLUDEINITIALBALANCE#0="Include opening balance";
+INCOMES#0={
+    "Gross Pay",
+    "Net Pay",
+    "Overtime",
+    "Tax Refund",
+};
+INTO#0="Into: ";
+MARKASCLOSED#0="Close Account";
+MARKASOPEN#0="Open Account";
+MEMO#0="Memo: ";
+MONEYREPORT#0="Report";
+NAME#0="Name: ";
+NEW#0="New";
+NEWACCOUNT#0="New Account";
+NEWCATEGORY#0="New Category";
+NEWFOLDER#0="New Folder";
+NEWITEM#0="New Item";
+NEWSCHEDULE#0="New Scheduled";
+NEWSHOPINGLIST#0="New Shopping list";
+NEWTEMPLATE#0="New Template";
+NEWTRANSACTION#0="New Transaction";
+NEXTDATE#0="Due Date: ";
+NOITEMSSELECTED#0="You did not select items.";
+NOTIFICATIONSLEFT#0="Repeat times: ";
+NOTRANSACTIONTOEXPORT#0="You do not have transactions to export.";
+OPEN#0="Open";
+OPENINGBALANCE#0="Opening Balance";
+OPERATIONSTYPES#0={
+    "Expense",
+    "Income",
+    "Transfer",
+};
+OPERATIONSTYPESEI#0={
+    "Expense",
+    "Income",
+};
+ORPHANACCOUNT#0="<Orphan>";
+PAY#0="Pay";
+PAYEE#0="Payee: ";
+PENDINGS#0="Upcoming";
+POSTPONE#0="Postpone";
+PRIORITY#0="High priority";
+PROGRESS#0="Progress...";
+PURGUE#0="Purge";
+QUANTITY#0="Quantity: ";
+RECONCILETITLE#0="Reconcile";
+REGISTRATION#0="Registration Key";
+REMOVEMEMO#0="Delete Memo";
+REMOVESPLITS#0="Delete Split";
+REPORTNAME#0="Report";
+REPORTTITLES#0={
+    "      Date",
+    " Number          ",
+    "Description                    ",
+    "Category                        ",
+    "Amount",
+};
+SAMEACCOUNT#0="Please select another account to pay.";
+SAVE#0="Save";
+SCHEDULES#0="Scheduled";
+SCHEDULESTITLE#0="Scheduled";
+SCHEDULETYPE#0="Repeat Every: ";
+SCHEDULETYPES#0={
+    "Only once",
+    "Week",
+    "Two Weeks",
+    "Three Weeks",
+    "Month",
+    "Two Months",
+    "Three Months",
+    "Six Months",
+};
+SELECT#0="Select here";
+SELECTACCOUNT#0="Select account";
+SELECTAFILE#0="Select a file";
+SELECTAFOLDER#0="Select a folder";
+SELECTDEFAULTCURRENCY#0="Select currency";
+SETSPLITS#0="With Splits";
+SHOPINGLIST#0="Shopping list";
+SHOPINGLISTS#0="Shopping lists";
+SPLIT#0="Split";
+SPLITMULTIPLESCATEGORIES#0="Split with multiple categories";
+STARTDATE#0="Start Date: ";
+STATUS#0="Status: ";
+STATUSSTRINGS#0={
+    "Unreconciled",
+    "Cleared",
+    "Reconciled",
+};
+TAXABLE#0="Taxable";
+TAXCATEGORY#0="Taxes";
+TAXDESCRIPTION#0="Tax";
+TEMPLATELISTOPTIONS#0={
+    "New Transaction",
+};
+TEMPLATES#0="Templates";
+TO#0="To: ";
+TOTAL#0="Total: ";
+TRANSACTION#0="Transaction";
+TRANSACTIONNUMBER#0="Number: ";
+TRANSACTIONS#0="Transactions";
+TRANSFERFROM#0="Transfer from ";
+TRANSFERTO#0="Transfer to ";
+TYPE#0="Type: ";
+UNCHECK#0="Uncheck";
+UNSETSPLITS#0="Without Splits";
+USETEMPLATE#0="Use template";
+VALUE#0="Unit Value: ";
+VERSION#0="Version: ";
+VIEW#0="View";
+VIEWBALANCE#0="View balance";
+VIEWCLEARED#0="View cleared";
+VIEWCURRENT#0="View current";
+VIEWRECONCILED#0="View reconciled";
+WHITOUTTEMPLATES#0="* Without Templates *";
